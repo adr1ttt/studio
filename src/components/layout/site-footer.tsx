@@ -8,26 +8,40 @@ const socialLinks = [
   { name: 'WhatsApp', icon: MessageCircle, href: 'https://whatsapp.com' },
 ];
 
-const SoccerBallIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      viewBox="0 0 100 100"
       {...props}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a10 10 0 0 1 8.66 5H3.34A10 10 0 0 1 12 2Z" />
-      <path d="m17.9 15.25-3.9-2.25-3.9 2.25 1.45 4.5h4.9l1.45-4.5z" />
-      <path d="m6.1 15.25 3.9-2.25 3.9 2.25-1.45 4.5h-4.9L6.1 15.25z" />
-      <path d="m12 7.5-3.9 2.25 1.45 4.5h4.9l1.45-4.5L12 7.5z" />
+      >
+      <path
+        fill="#A70042"
+        d="M0 50V20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v30H0z"
+      />
+      <path
+        fill="#004C99"
+        d="M0 50h100v30c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V50z"
+      />
+      <path fill="#EDBB00" d="M44 50H10v35c0 2.761 2.239 5 5 5h29V50z" />
+      <path fill="#EDBB00" d="M90 50H56v35c0 2.761-2.239 5-5 5h29c2.761 0 5-2.239 5-5V50z" />
+      <path fill="#A70042" d="M10 50h34v12H10zM10 70h34v12H10z" />
+      <path fill="#004C99" d="M56 50h34v12H56zM56 70h34v12H56z" />
+      <path
+        fill="#A70042"
+        d="M10 10h12v12H10zM28 10h12v12H28zM10 28h12v12H10zM28 28h12v12H28z"
+      />
+      <path
+        fill="#004C99"
+        d="M58 10h12v12H58zM76 10h12v12H76zM58 28h12v12H58zM76 28h12v12H76z"
+      />
+      <path fill="#EDBB00" d="M44 44h12v12H44z" />
+      <path
+        d="M50 50c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z"
+        fill="#EDBB00"
+      />
+      <path d="M50 53c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" />
     </svg>
-  );
+);
 
 export function SiteFooter() {
   return (
@@ -35,7 +49,7 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <SoccerBallIcon className="h-6 w-6 text-primary" />
+            <FcBarcelonaLogo className="h-8 w-8" />
             <span className="font-bold font-headline hidden sm:inline-block">FCB Kolkata</span>
           </Link>
           <p className="text-center text-sm text-muted-foreground md:ml-4">
