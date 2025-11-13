@@ -11,7 +11,6 @@ const socialLinks = [
 const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
    xmlns="http://www.w3.org/2000/svg"
-   version="1.0"
    viewBox="0 0 745 795"
    id="svg2"
    {...props}
@@ -214,7 +213,7 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <FcBarcelonaLogo className="h-10 w-10" />
+            <FcBarcelonaLogo className="h-12 w-12" />
             <span className="font-bold font-headline hidden sm:inline-block">FCB Kolkata</span>
           </Link>
           <p className="text-center text-sm text-muted-foreground md:ml-4">
