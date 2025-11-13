@@ -18,44 +18,53 @@ const navItems = [
 ];
 
 const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      {...props}
-      >
-      <path
-        fill="#A70042"
-        d="M0 50V20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v30H0z"
-      />
-      <path
-        fill="#004C99"
-        d="M0 50h100v30c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V50z"
-      />
-      <path fill="#EDBB00" d="M44 50H10v35c0 2.761 2.239 5 5 5h29V50z" />
-      <path fill="#EDBB00" d="M90 50H56v35c0 2.761-2.239 5-5 5h29c2.761 0 5-2.239 5-5V50z" />
-      <path fill="#A70042" d="M10 50h34v12H10zM10 70h34v12H10z" />
-      <path fill="#004C99" d="M56 50h34v12H56zM56 70h34v12H56z" />
-      <g fill="#A70042">
-        <path d="M10 10h12v12H10zM28 10h12v12H28zM10 28h12v12H10zM28 28h12v12H28z" />
-      </g>
-      <g fill="#FFFFFF">
-        <path d="M22 10h6v30h-6zM10 22h30v6H10z" />
-      </g>
-      <path
-        fill="#004C99"
-        d="M58 10h12v12H58zM76 10h12v12H76zM58 28h12v12H58zM76 28h12v12H76z"
-      />
-      <path fill="#EDBB00" d="M44 44h12v12H44z" />
-      <path
-        d="M50 50c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z"
-        fill="#EDBB00"
-      />
-      <path d="M50 53c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" fill="#000000" />
-      <path
-        d="M50 63.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM44 59.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM56 59.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM47 55.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM53 55.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3z"
-        fill="#A70042"
-      />
-    </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    {...props}
+  >
+    <path
+      d="M0 20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v80H0V20z"
+      fill="#004c99"
+    />
+    <path
+      d="M0 20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v25H0V25z"
+      fill="#a70042"
+    />
+    <path d="M42 45H0v-5h42z" fill="#fbb100" />
+    <path d="M10 50h15v10H10zm20 0h15v10H30z" fill="#a70042" />
+    <path d="M10 65h15v10H10zm20 0h15v10H30z" fill="#a70042" />
+    <path d="M10 80h15v10H10zm20 0h15v10H30z" fill="#a70042" />
+    <path d="M55 50h15v10H55zm20 0h15v10H75z" fill="#004c99" />
+    <path d="M55 65h15v10H55zm20 0h15v10H75z" fill="#004c99" />
+    <path d="M55 80h15v10H55zm20 0h15v10H75z" fill="#004c99" />
+    <path
+      d="M25 5L5 20h20zm20 0L25 20h20z"
+      fill="#fff"
+      stroke="#a70042"
+      strokeWidth="2"
+    />
+    <path
+      d="M75 5L55 20h20zm20 0L75 20h20z"
+      fill="#a70042"
+      stroke="#fff"
+      strokeWidth="2"
+    />
+    <path d="M5 30l20-15v20zm20 0l20-15v20z" fill="#fff" stroke="#a70042" strokeWidth="2" />
+    <path
+      d="M55 30l20-15v20zm20 0l20-15v20z"
+      fill="#a70042"
+      stroke="#fff"
+      strokeWidth="2"
+    />
+    <path d="M50 40 a12 12 0 0 1 0 20 a12 12 0 0 1 0-20" fill="#fbb100" />
+    <path d="M50 42 a10 10 0 0 1 0 16 a10 10 0 0 1 0-16" fill="#000" />
+    <path d="M50 50 a5 5 0 0 1 0-5 a5 5 0 0 0 0 5" fill="red" />
+    <path
+      d="M48 53h4v4h-4zm-5-3h4v4h-4zm10 0h4v4h-4zm-2.5-3h4v4h-4zm-5-3h4v4h-4z"
+      fill="#fff"
+    />
+  </svg>
 );
 
 
