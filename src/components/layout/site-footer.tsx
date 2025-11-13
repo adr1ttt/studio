@@ -213,7 +213,7 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <FcBarcelonaLogo className="h-12 w-12" />
+            <FcBarcelonaLogo className="h-18 w-18" />
             <span className="font-bold font-headline hidden sm:inline-block">FCB Kolkata</span>
           </Link>
           <p className="text-center text-sm text-muted-foreground md:ml-4">

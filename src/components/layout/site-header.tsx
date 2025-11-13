@@ -224,7 +224,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <FcBarcelonaLogo className="h-12 w-12" />
+          <FcBarcelonaLogo className="h-18 w-18" />
           <span className="font-bold font-headline sm:inline-block">FCB Kolkata</span>
         </Link>
         
@@ -263,7 +263,7 @@ export function SiteHeader() {
               <SheetContent side="left">
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8">
-                    <FcBarcelonaLogo className="h-12 w-12" />
+                    <FcBarcelonaLogo className="h-18 w-18" />
                     <span className="font-bold font-headline">FCB Kolkata</span>
                   </Link>
                   <nav className="flex flex-col gap-6">
