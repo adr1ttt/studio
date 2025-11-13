@@ -22,7 +22,7 @@ const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
       {...props}
-      >
+    >
       <path
         fill="#A70042"
         d="M0 50V20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v30H0z"
