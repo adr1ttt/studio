@@ -22,7 +22,7 @@ const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
       {...props}
-    >
+      >
       <path
         fill="#A70042"
         d="M0 50V20C0 8.954 8.954 0 20 0h60c11.046 0 20 8.954 20 20v30H0z"
@@ -35,10 +35,12 @@ const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
       <path fill="#EDBB00" d="M90 50H56v35c0 2.761-2.239 5-5 5h29c2.761 0 5-2.239 5-5V50z" />
       <path fill="#A70042" d="M10 50h34v12H10zM10 70h34v12H10z" />
       <path fill="#004C99" d="M56 50h34v12H56zM56 70h34v12H56z" />
-      <path
-        fill="#A70042"
-        d="M10 10h12v12H10zM28 10h12v12H28zM10 28h12v12H10zM28 28h12v12H28z"
-      />
+      <g fill="#A70042">
+        <path d="M10 10h12v12H10zM28 10h12v12H28zM10 28h12v12H10zM28 28h12v12H28z" />
+      </g>
+      <g fill="#FFFFFF">
+        <path d="M22 10h6v30h-6zM10 22h30v6H10z" />
+      </g>
       <path
         fill="#004C99"
         d="M58 10h12v12H58zM76 10h12v12H76zM58 28h12v12H58zM76 28h12v12H76z"
@@ -48,7 +50,11 @@ const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
         d="M50 50c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z"
         fill="#EDBB00"
       />
-      <path d="M50 53c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" />
+      <path d="M50 53c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12z" fill="#000000" />
+      <path
+        d="M50 63.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM44 59.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM56 59.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM47 55.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3zM53 55.5c-1 0-2.5 1-2.5 3s1.5 3 2.5 3 2.5-1 2.5-3-1.5-3-2.5-3z"
+        fill="#A70042"
+      />
     </svg>
 );
 
