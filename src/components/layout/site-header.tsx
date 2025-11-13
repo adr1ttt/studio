@@ -21,13 +21,10 @@ const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
    xmlns="http://www.w3.org/2000/svg"
    version="1.0"
-   width="142"
-   height="144"
+   viewBox="0 0 745 795"
    id="svg2"
    {...props}
    >
-  <defs
-     id="defs4" />
   <g
      transform="translate(-111.77088,-91.029934)"
      id="layer1">
