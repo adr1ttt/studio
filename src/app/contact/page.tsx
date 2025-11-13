@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { ContactForm } from './components/contact-form';
 
 const socialLinks = [
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', handle: '@kolkatablaugrana' },
-  { name: 'X (Twitter)', icon: Twitter, href: 'https://x.com', handle: '@KBG_Official' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', handle: 'KolkataBlaugrana' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', handle: '@fcbkolkata' },
+  { name: 'X (Twitter)', icon: Twitter, href: 'https://x.com', handle: '@FCB_Kolkata' },
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', handle: 'FCBKolkata' },
 ];
 
 export default function ContactPage() {
@@ -32,8 +32,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">Email Us</h3>
                   <p className="text-muted-foreground">For general inquiries</p>
-                  <a href="mailto:contact@kolkatablaugrana.com" className="text-primary hover:underline">
-                    contact@kolkatablaugrana.com
+                  <a href="mailto:contact@fcbkolkata.com" className="text-primary hover:underline">
+                    contact@fcbkolkata.com
                   </a>
                 </div>
               </div>

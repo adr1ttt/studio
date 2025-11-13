@@ -89,7 +89,7 @@ export function MembershipForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button type="submit" className="w-full">
               Subscribe for ₹499/year
             </Button>
           </form>

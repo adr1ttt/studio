@@ -108,7 +108,7 @@ export function EventBookingForm({ event, children }: EventBookingFormProps) {
             />
             <DialogFooter>
                <DialogClose asChild>
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Book Now</Button>
+                <Button type="submit" className="w-full">Book Now</Button>
                </DialogClose>
             </DialogFooter>
           </form>

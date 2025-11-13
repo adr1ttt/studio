@@ -45,7 +45,7 @@ export function EventCard({ event }: EventCardProps) {
       </CardContent>
       <CardFooter>
         <EventBookingForm event={event}>
-            <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button className="w-full">
                 Book / Register
             </Button>
         </EventBookingForm>

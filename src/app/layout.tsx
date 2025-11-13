@@ -5,7 +5,7 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Kolkata Blaugrana Hub',
+  title: 'FCB Kolkata Hub',
   description: 'The official hub for FC Barcelona fans in Kolkata. Find events, join as a member, and connect with the community.',
 };
 

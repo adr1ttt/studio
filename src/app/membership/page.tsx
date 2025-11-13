@@ -19,7 +19,7 @@ export default function MembershipPage() {
           Become a Premium Member
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Join the official Kolkata Blaugrana family and unlock exclusive perks.
+          Join the official FCB Kolkata family and unlock exclusive perks.
         </p>
       </header>
       
@@ -32,7 +32,7 @@ export default function MembershipPage() {
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-accent-foreground mr-3 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-accent mr-3 flex-shrink-0" />
                   <span className="text-foreground">{benefit}</span>
                 </li>
               ))}

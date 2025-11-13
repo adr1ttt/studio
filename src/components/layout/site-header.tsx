@@ -46,7 +46,7 @@ export function SiteHeader() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <SoccerBallIcon className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline sm:inline-block">Kolkata Blaugrana</span>
+          <span className="font-bold font-headline sm:inline-block">FCB Kolkata</span>
         </Link>
         
         <div className="flex flex-1 items-center justify-end">
@@ -85,7 +85,7 @@ export function SiteHeader() {
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8">
                     <SoccerBallIcon className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline">Kolkata Blaugrana</span>
+                    <span className="font-bold font-headline">FCB Kolkata</span>
                   </Link>
                   <nav className="flex flex-col gap-6">
                     {navItems.map((item) => (

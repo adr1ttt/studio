@@ -36,10 +36,10 @@ export function SiteFooter() {
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
           <Link href="/" className="flex items-center space-x-2">
             <SoccerBallIcon className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline hidden sm:inline-block">Kolkata Blaugrana</span>
+            <span className="font-bold font-headline hidden sm:inline-block">FCB Kolkata</span>
           </Link>
           <p className="text-center text-sm text-muted-foreground md:ml-4">
-            &copy; {new Date().getFullYear()} Kolkata Blaugrana Hub. All rights reserved.
+            &copy; {new Date().getFullYear()} FCB Kolkata Hub. All rights reserved.
           </p>
         </div>
         <div className="flex items-center gap-5">

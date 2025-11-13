@@ -35,7 +35,7 @@ export default function Home() {
             The heart of FC Barcelona in the City of Joy. Join the most passionate fan community.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button size="lg" asChild>
               <Link href="/events">
                 View Events <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -87,7 +87,7 @@ export default function Home() {
                   <p className="text-muted-foreground">{nextEvent.description}</p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild className="w-full md:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Button asChild>
                     <Link href="/events">
                       Register Now
                     </Link>

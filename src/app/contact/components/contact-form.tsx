@@ -91,7 +91,7 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Send Message</Button>
+            <Button type="submit" className="w-full">Send Message</Button>
           </form>
         </Form>
       </CardContent>

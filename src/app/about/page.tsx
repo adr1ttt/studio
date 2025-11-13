@@ -14,7 +14,7 @@ export default function AboutPage() {
           Our Story
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          From a small group of friends to a family of thousands, this is how Kolkata became Blaugrana.
+          From a small group of friends to a family of thousands, this is how Kolkata became part of the Blaugrana family.
         </p>
       </header>
 
