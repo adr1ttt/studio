@@ -20,53 +20,57 @@ const navItems = [
 const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 100 100"
+    viewBox="0 0 750 750"
     {...props}
-  >
-    <path
-      d="M50 0a50 50 0 00-50 50c0 22 14.3 41 34.3 47.4.3 1 .6 2 1 2.6h29.4c.4-.6.7-1.5 1-2.6A50 50 0 0050 0z"
-      fill="#004c99"
-    />
-    <path
-      d="M50 0a50 50 0 00-50 50c0 22 14.3 41 34.3 47.4.3 1 .6 2 1 2.6h-2c-1.3-1.3-2.3-3-3-4.5-18.3-6.6-30.3-24-30.3-45.5a45 45 0 1184 22.5V50a45 45 0 01-26.4 41.2c-1.2 1-2.7 1.8-4.3 1.8h-2.6a45 45 0 01-16.7-4V50a45 45 0 0122.5-39 45 45 0 00-34-6z"
-      fill="#004184"
-    />
-    <path d="M0 50a50 50 0 0034.3 47.4.3 1 .6 2 1 2.6h29.4c.4-.6.7-1.5 1-2.6A50 50 0 00100 50H0z" fill="#a70042" />
-    <path
-      d="M100 50h-2c-1.3 1.3-2.3 3-3 4.5-18.3 6.6-30.3 24-30.3 45.5h7.7c0-23.2 13-43 31.3-50h-5.7zm-65.7 47.4c.3 1 .6 2 1 2.6h-2c-1.3-1.3-2.3-3-3-4.5C12 88.8 0 69.8 0 50h5.7c1.3-1.3 2.3-3 3-4.5 18.3-6.6 30.3-24 30.3-45.5H31.6c0 23.2-13 43-31.3 50h5.7C19.3 50 31.6 32 31.6 10h7.7C39.3 32 27 50 27 50h4.3c1.3-1.3 2.3-3 3-4.5 18.3-6.6 30.3-24 30.3-45.5h7.7c0 23.2-13 43-31.3 50h5.7c14.3 0 26.6-18 26.6-40h7.7c0 22-12.3 40-30.3 45.5 1 .3 1.6.8 2.2 1.3a45 45 0 0018-20.5 45 45 0 01-26.4 41.2c-1.2 1-2.7 1.8-4.3 1.8h-2.6a45 45 0 01-16.7-4z"
-      fill="#7f0030"
-    />
-    <path
-      d="M50 0a50 50 0 00-31.6 10H10a50 50 0 00-10 10v10a50 50 0 0010 10h8.4A50 50 0 0050 0zm0 0a50 50 0 0131.6 10h8.4a50 50 0 0110 10v10a50 50 0 01-10 10h-8.4A50 50 0 0150 0z"
-      fill="#c20000"
-    />
-    <path d="M10 20h21.6v20H10a50 50 0 010-20zM31.6 20H10v20h21.6z" fill="#fff" />
-    <path d="M15 20v20h11.6V20H15z" fill="#c20000" />
-    <path d="M10 25h21.6v10H10V25z" fill="#c20000" />
-    <path
-      d="M58.4 20H90v20H58.4zM68.4 20H90v5H68.4zm0 10H90v5H68.4zM58.4 20h5v20h-5z"
-      fill="#fde400"
-    />
-    <path d="M63.4 20h5v20h-5zm10 0h5v20h-5zm10 0h5v20h-5z" fill="#c20000" />
-    <path d="M43.8 45.5h12.4v9H43.8z" fill="#fde400" />
-    <text x="45" y="53.5" fontFamily="Arial" fontSize="7" fontWeight="bold" fill="#000">FCB</text>
-    <path
-      d="M50 67a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"
-      fill="#fde400"
-    />
-    <path
-      d="M50 65a3 3 0 110-6 3 3 0 010 6z"
-      fill="#000"
-      stroke="#fff"
-      strokeWidth=".5"
-    />
-    <path
-      d="M50 65a3 3 0 100-6 3 3 0 000 6z"
-      fill="none"
-      stroke="#000"
-      strokeWidth=".5"
-    />
-  </svg>
+    >
+    <g transform="translate(-111.77088,-91.029934)">
+        <g transform="matrix(0.1892724,0,0,0.1892724,111.6987,62.603897)">
+        <g transform="translate(2.485175,13.595533)">
+            <g>
+            <path d="M 74.6435,174.44821 C 124.7253,196.43128 206.9224,193.82841 262.0544,152.22012 C 339.14427,208.70411 413.33871,202.90565 484.08109,152.22012 C 531.2457,186.31197 603.86063,200.86803 671.99683,175.16368 L 702.542,217.60323 C 622.89313,324.04748 652.37631,425.79403 734.52965,515.33515 L 700.03211,550.31438 C 707.84694,779.89493 530.03406,834.70757 427.92962,840.39844 L 373.03309,885.31318 L 318.54631,841.06766 C 136.2595,825.32542 40.0155,729.15858 45.9697,550.90381 L 10.5,515.06777 C 79.804395,440.10464 131.8824,337.67107 42.855,217.5801 L 74.6435,174.44821 z" style={{fill: 'rgb(0, 0, 0)', fillOpacity: 1, fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '1px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1}} />
+            <path d="m 78.793674,546.28135 586.549466,0 c 15.41589,162.31066 -87.70535,249.97878 -244.51339,258.59808 l -99.64274,0.2519 C 171.16375,794.34673 59.391894,715.13788 78.793674,546.28135 z" style={{fill: 'rgb(0, 77, 152)', fillOpacity: 1, fillRule: 'evenodd', stroke: 'none'}} />
+            <rect width="83.085953" height="259.36292" x="331.65045" y="548.23254" style={{fill: 'rgb(165, 0, 68)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            <g transform="translate(-0.132,0)">
+                <rect width="83.085953" height="231.79605" x="166.4175" y="548.23254" style={{fill: 'rgb(165, 0, 68)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+                <rect width="54.117386" height="23.876505" x="195.38606" y="768.1521" style={{fill: 'rgb(165, 0, 68)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            </g>
+            <g transform="translate(-0.132,0)">
+                <rect width="83.085953" height="231.79605" x="496.20349" y="548.23254" style={{fill: 'rgb(165, 0, 68)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+                <rect width="54.117386" height="23.876505" x="496.20349" y="768.1521" style={{fill: 'rgb(165, 0, 68)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            </g>
+            <path d="M 370.49148,228.07936 L 370.49148,458.45324 L 90.4986,460.47851 L 119.35863,349.59525 L 83.41017,216.9404 L 260.62086,194.15617 L 370.49148,228.07936 z" style={{fill: 'rgb(255, 255, 255)', fillOpacity: 1, fillRule: 'evenodd', stroke: 'none', strokeWidth: '1px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1}} />
+            <path d="m 374.54201,228.07936 0,230.37388 279.99288,2.02527 L 625.67486,349.59525 661.62332,216.9404 484.41263,194.15617 374.54201,228.07936 z" style={{fill: 'rgb(255, 237, 2)', fillOpacity: 1, fillRule: 'evenodd', stroke: 'none'}} />
+            <rect width="80.278473" height="256.30661" x="208.7043" y="200.71866" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            <rect width="80.278473" height="249.80124" x="296.32172" y="-370.49149" transform="matrix(0,1,-1,0,0,0)" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            <g transform="translate(-0.132,0)">
+                <rect width="29.691183" height="236.46906" x="399.80099" y="218.88828" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+                <rect width="29.691183" height="253.96564" x="456.16339" y="201.94867" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+                <rect width="29.691183" height="240.18045" x="512.89478" y="216.26405" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+                <rect width="29.691183" height="231.16705" x="569.09595" y="225.06264" style={{fill: 'rgb(219, 0, 48)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none'}} />
+            </g>
+            <path d="m 261.58675,170.46875 c -51.70721,37.89943 -133.52929,41.88686 -180.500001,22.9375 l -18.8125,24.21875 c 80.707401,113.56087 34.33735,227.81001 -29.65625,297.78125 l 29.46875,31.1875 C 50.128749,717.75899 150.01692,816.75142 325.618,826.9375 l 47.59375,39.75 47.5,-40.375 c 102.26071,-1.76362 281.57006,-59.11544 262.25,-279.96875 l 29.625,-30.6875 C 637.43364,432.30967 611.53067,318.15118 684.14925,217.625 L 666.493,193.5625 c -64.25547,21.11651 -137.76523,9.41158 -182,-22.5625 -66.34791,47.53697 -150.60519,52.44398 -222.90625,-0.53125 z M 485.08675,203 c 39.8925,24.76946 83.97471,31.81752 159.96875,25.15625 -38.05401,65.84035 -42.16417,144.27357 -8.46875,220 l -527.375,-0.3125 c 28.36423,-67.66597 34.8722,-145.53027 -9.593751,-221.1875 54.812881,7.95793 108.356271,6.05118 161.750001,-23 C 333.79105,246.1714 408.29682,246.94911 485.08675,203 z m -394.593751,345.84375 565.531251,0 c 14.86323,156.49185 -84.56346,241.0022 -235.75,249.3125 l -96.09375,0.25 C 179.53551,788.00832 71.786769,711.64688 90.492999,548.84375 z" style={{fill: 'rgb(237, 187, 0)', fillOpacity: 1, fillRule: 'evenodd', stroke: 'rgb(222, 180, 5)', strokeWidth: '0.937881px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1}} />
+            <path d="M 99.008139,227.48004 C 143.4741,303.13727 136.96137,381.00016 108.59714,448.66613 L 635.96014,448.97787 C 602.2647,373.25144 606.38913,294.81703 644.44317,228.97668 C 568.44911,235.63795 524.37815,228.59666 484.48564,203.8272 C 407.6957,247.77631 333.16554,246.98161 260.74248,204.46646 C 207.34874,233.51764 153.82102,235.43797 99.008139,227.48004 z" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: 4, strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+            <path d="M 90.487781,548.84325 L 656.00972,548.84325 C 670.87295,705.33515 571.44856,789.86045 420.26202,798.17075 L 324.19143,798.41355 C 179.54644,788.01565 71.781547,711.64635 90.487781,548.84325 z" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: 4, strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+            <path d="M 372.69724,235.39281 L 372.69724,449.07702" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: 4, strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+            <g>
+                <path d="m 391.55417,656.70959 a 57.377506,57.377506 0 1 1 -114.75501,0 57.377506,57.377506 0 1 1 114.75501,0 z" transform="matrix(1.3400123,0,0,1.3400123,-73.998605,-209.21101)" style={{fill: 'rgb(237, 187, 0)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'rgb(0, 0, 0)', strokeWidth: 3, strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeOpacity: 1, strokeDasharray: 'none', strokeDashoffset: 0}} />
+                <g style={{strokeWidth: '3.5', strokeMiterlimit: 4, strokeDasharray: 'none'}}>
+                <path d="M 329.44777,608.15941 C 320.47337,640.86862 314.90814,673.07544 340.79716,688.55097 C 358.88742,699.36468 371.11994,677.31109 374.50903,668.76676" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+                <path d="M 302.65058,701.79193 C 317.80699,701.10025 325.71585,699.85353 335.43773,685.08309" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+                </g>
+                <path d="M 373.87149,669.34111 C 389.08143,659.9919 402.60917,664.51579 408.89354,687.92044 C 423.69695,681.97207 437.96367,693.39681 441.68069,704.94454" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+                <path d="M 409.2088,687.92044 C 397.97237,715.04865 368.41684,727.60692 326.92568,731.74173" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+                <path d="M 373.8945,670.45345 C 364.55925,661.90517 350.19703,652.12285 371.12035,626.99168 C 362.2422,615.74132 359.82321,604.74932 371.42859,594.3183" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+                <path d="M 450.3379,675.38529 C 436.68337,651.24725 404.90173,617.80042 371.12035,626.68344" style={{fill: 'none', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+            </g>
+            </g>
+            <path d="M 266.30019,461.87951 L 266.30019,462.16076 L 252.33144,462.16076 L 252.33144,489.28576 L 252.33144,504.66076 L 252.33144,534.81701 L 267.42519,534.81701 L 267.42519,504.66076 L 288.95644,504.66076 L 288.95644,489.28576 L 267.42519,489.28576 L 267.42519,477.50451 L 304.58144,477.50451 L 304.58144,461.87951 L 266.30019,461.87951 z" style={{fill: 'rgb(0, 0, 0)', fillOpacity: 1, fillRule: 'nonzero', stroke: 'none', strokeWidth: '3.5', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeDashoffset: 0, strokeOpacity: 1}} />
+            <path d="M 380.56931,484.63927 L 394.11679,477.56447 C 385.46947,458.44401 350.40724,453.00655 338.87318,477.56447 C 326.97248,506.85671 339.62229,534.07048 362.65653,536.7218 C 377.29264,538.85314 388.89145,531.68822 393.81573,518.95955 L 380.41878,511.28265 C 376.85061,520.17284 363.2466,526.29165 352.87224,511.43317 C 349.67718,504.79392 348.85785,494.57373 352.42066,484.63927 C 360.92894,472.94913 373.36609,474.21448 380.56931,484.63927 z" style={{fill: 'rgb(0, 0, 0)', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '0.2', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeMiterlimit: 4, strokeDasharray: 'none', strokeOpacity: 1}} />
+            <path d="M 432.36269,462.06701 L 432.64394,535.37951 L 472.55019,535.22326 C 485.53526,533.40498 502.55819,512.14923 482.61269,495.62951 C 493.15753,486.33631 491.83598,466.45739 470.73769,462.22326 L 432.36269,462.06701 z M 447.70644,476.50451 L 467.58144,476.50451 C 476.32162,479.01977 473.72812,487.42238 467.86269,488.84826 L 447.70644,488.84826 L 447.70644,476.50451 z M 447.86269,503.16076 L 468.76894,503.44201 C 479.11021,506.52037 476.77489,518.30491 469.08144,520.31701 L 448.01894,520.16076 L 447.86269,503.16076 z" style={{fill: 'rgb(0, 0, 0)', fillRule: 'evenodd', stroke: 'rgb(0, 0, 0)', strokeWidth: '1px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1}} />
+        </g>
+        </g>
+    </g>
+    </svg>
 );
 
 
