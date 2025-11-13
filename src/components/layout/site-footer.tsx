@@ -1,5 +1,5 @@
-import { Instagram, Twitter, Facebook, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { Facebook, Instagram, MessageCircle, Twitter } from 'lucide-react';
 
 const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
@@ -10,16 +10,15 @@ const socialLinks = [
 
 const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 745 795"
+   viewBox="0 0 745 745"
    id="svg2"
    {...props}
    >
   <g
-     transform="translate(-111.77088,-91.029934)"
+     transform="translate(-111.77088,-118.02994)"
      id="layer1">
     <g
-       transform="matrix(0.1892724,0,0,0.1892724,111.6987,62.603897)"
+       transform="matrix(0.1892724,0,0,0.1892724,111.6987,90.603897)"
        id="g2427">
       <g
          transform="translate(2.485175,13.595533)"
@@ -213,7 +212,7 @@ export function SiteFooter() {
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <FcBarcelonaLogo className="h-18 w-18" />
+            <FcBarcelonaLogo className="h-[72px] w-[72px]" />
             <span className="font-bold font-headline hidden sm:inline-block">FCB Kolkata</span>
           </Link>
           <p className="text-center text-sm text-muted-foreground md:ml-4">

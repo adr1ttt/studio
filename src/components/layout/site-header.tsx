@@ -19,16 +19,15 @@ const navItems = [
 
 const FcBarcelonaLogo = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 745 795"
+   viewBox="0 0 745 745"
    id="svg2"
    {...props}
    >
   <g
-     transform="translate(-111.77088,-91.029934)"
+     transform="translate(-111.77088,-118.02994)"
      id="layer1">
     <g
-       transform="matrix(0.1892724,0,0,0.1892724,111.6987,62.603897)"
+       transform="matrix(0.1892724,0,0,0.1892724,111.6987,90.603897)"
        id="g2427">
       <g
          transform="translate(2.485175,13.595533)"
@@ -224,7 +223,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <FcBarcelonaLogo className="h-18 w-18" />
+          <FcBarcelonaLogo className="h-[72px] w-[72px]" />
           <span className="font-bold font-headline sm:inline-block">FCB Kolkata</span>
         </Link>
         
@@ -263,7 +262,7 @@ export function SiteHeader() {
               <SheetContent side="left">
                 <div className="p-4">
                   <Link href="/" className="flex items-center space-x-2 mb-8">
-                    <FcBarcelonaLogo className="h-18 w-18" />
+                    <FcBarcelonaLogo className="h-[72px] w-[72px]" />
                     <span className="font-bold font-headline">FCB Kolkata</span>
                   </Link>
                   <nav className="flex flex-col gap-6">
