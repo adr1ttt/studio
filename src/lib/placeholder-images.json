@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-banner",
+      "description": "Hero banner showing a vibrant football stadium at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1679391029864-d46f366a456b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmb290YmFsbCUyMHN0YWRpdW18ZW58MHx8fHwxNzYyOTc5OTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "football stadium"
+    },
+    {
+      "id": "event-screening",
+      "description": "Fans watching a football match on a large screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1561722798-9a732d141027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYW4lMjBzY3JlZW5pbmd8ZW58MHx8fHwxNzYzMDQ4Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fan screening"
+    },
+    {
+      "id": "event-tournament",
+      "description": "Amateur football tournament in progress on a sunny day.",
+      "imageUrl": "https://images.unsplash.com/photo-1757032542654-bc0948131a35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhbWF0ZXVyJTIwZm9vdGJhbGx8ZW58MHx8fHwxNzYzMDQ4Nzk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "amateur football"
+    },
+    {
+      "id": "event-charity",
+      "description": "Group of people participating in a charity run.",
+      "imageUrl": "https://images.unsplash.com/photo-1593113598332-cd288d649433?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGFyaXR5JTIwZXZlbnR8ZW58MHx8fHwxNzYzMDIzMjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "charity event"
+    },
+    {
+      "id": "organizer-1",
+      "description": "Portrait of the first organizer.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjMwMzQ3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "organizer-2",
+      "description": "Portrait of the second organizer.",
+      "imageUrl": "https://images.unsplash.com/photo-1531123414780-f74242c2b052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYzMDM0NzkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "organizer-3",
+      "description": "Portrait of the third organizer.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjMwMzQ3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "about-us-group",
+      "description": "A group of fans cheering together.",
+      "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYW5zJTIwY2hlZXJpbmd8ZW58MHx8fHwxNzYyOTM3OTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fans cheering"
+    }
+  ]
 }
