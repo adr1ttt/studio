@@ -1,4 +1,4 @@
-import type { Event, Organizer } from './types';
+import type { Event, Organizer, GalleryImage, NewsItem, SquadPlayer, Fixture, MatchResult, MerchandiseItem } from './types';
 
 export const events: Event[] = [
   {
@@ -54,5 +54,199 @@ export const organizers: Organizer[] = [
     name: 'Rohan Banerjee',
     role: 'Membership Lead',
     imageId: 'organizer-3',
+  },
+];
+
+export const galleryImages: GalleryImage[] = [
+  { id: 'gal-1', imageId: 'gallery-screening-1', caption: 'El Clásico Watch Party 2024', category: 'screenings' },
+  { id: 'gal-2', imageId: 'gallery-tournament-1', caption: 'Blaugrana Cup Semi-Finals', category: 'tournaments' },
+  { id: 'gal-3', imageId: 'gallery-meetup-1', caption: 'Monthly Culers Meetup', category: 'meetups' },
+  { id: 'gal-4', imageId: 'gallery-charity-1', caption: 'Winter Charity Drive', category: 'charity' },
+  { id: 'gal-5', imageId: 'gallery-screening-2', caption: 'Champions League Night', category: 'screenings' },
+  { id: 'gal-6', imageId: 'gallery-tournament-2', caption: 'Blaugrana Cup Finals', category: 'tournaments' },
+  { id: 'gal-7', imageId: 'gallery-meetup-2', caption: 'New Members Welcome Night', category: 'meetups' },
+  { id: 'gal-8', imageId: 'gallery-screening-3', caption: 'La Liga Season Opener', category: 'screenings' },
+];
+
+export const newsItems: NewsItem[] = [
+  { headline: "FCB Kolkata ranked among India's Top 5 Official Penyes" },
+  { headline: "El Clásico Live Screening — Registrations Now Open!" },
+  { headline: "New season, new kits — Blaugrana merchandise arriving soon" },
+  { headline: "Annual Charity Drive raises ₹2L+ for local schools" },
+  { headline: "FCB Kolkata celebrates 10 years of Més que un club" },
+  { headline: "Blaugrana Cup 2025 registration begins next month" },
+];
+
+export const squadPlayers: SquadPlayer[] = [
+  // Goalkeepers
+  { number: 1, name: 'Marc-André ter Stegen', position: 'Goalkeeper', nationality: 'Germany' },
+  { number: 13, name: 'Iñaki Peña', position: 'Goalkeeper', nationality: 'Spain' },
+  // Defenders
+  { number: 2, name: 'Pau Cubarsí', position: 'Defender', nationality: 'Spain' },
+  { number: 3, name: 'Alejandro Balde', position: 'Defender', nationality: 'Spain' },
+  { number: 4, name: 'Ronald Araújo', position: 'Defender', nationality: 'Uruguay' },
+  { number: 15, name: 'Andreas Christensen', position: 'Defender', nationality: 'Denmark' },
+  { number: 23, name: 'Jules Koundé', position: 'Defender', nationality: 'France' },
+  { number: 28, name: 'Héctor Fort', position: 'Defender', nationality: 'Spain' },
+  // Midfielders
+  { number: 6, name: 'Gavi', position: 'Midfielder', nationality: 'Spain' },
+  { number: 8, name: 'Pedri', position: 'Midfielder', nationality: 'Spain' },
+  { number: 14, name: 'Fermín López', position: 'Midfielder', nationality: 'Spain' },
+  { number: 16, name: 'Frenkie de Jong', position: 'Midfielder', nationality: 'Netherlands' },
+  { number: 17, name: 'Marc Casadó', position: 'Midfielder', nationality: 'Spain' },
+  { number: 20, name: 'Dani Olmo', position: 'Midfielder', nationality: 'Spain' },
+  { number: 22, name: 'Pablo Torre', position: 'Midfielder', nationality: 'Spain' },
+  // Forwards
+  { number: 7, name: 'Ferran Torres', position: 'Forward', nationality: 'Spain' },
+  { number: 9, name: 'Robert Lewandowski', position: 'Forward', nationality: 'Poland' },
+  { number: 10, name: 'Ansu Fati', position: 'Forward', nationality: 'Spain' },
+  { number: 11, name: 'Raphinha', position: 'Forward', nationality: 'Brazil' },
+  { number: 19, name: 'Lamine Yamal', position: 'Forward', nationality: 'Spain' },
+];
+
+export const upcomingFixtures: Fixture[] = [
+  {
+    id: 'fix-1',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Villarreal CF',
+    date: 'Sat, Apr 12',
+    time: '21:00 IST',
+    competition: 'La Liga',
+    venue: 'Spotify Camp Nou',
+  },
+  {
+    id: 'fix-2',
+    homeTeam: 'Inter Milan',
+    awayTeam: 'FC Barcelona',
+    date: 'Wed, Apr 16',
+    time: '00:30 IST',
+    competition: 'UCL Quarter-Final',
+    venue: 'San Siro',
+  },
+  {
+    id: 'fix-3',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Real Betis',
+    date: 'Sun, Apr 20',
+    time: '23:30 IST',
+    competition: 'La Liga',
+    venue: 'Spotify Camp Nou',
+  },
+  {
+    id: 'fix-4',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Inter Milan',
+    date: 'Wed, Apr 23',
+    time: '00:30 IST',
+    competition: 'UCL Quarter-Final',
+    venue: 'Spotify Camp Nou',
+  },
+  {
+    id: 'fix-5',
+    homeTeam: 'Celta Vigo',
+    awayTeam: 'FC Barcelona',
+    date: 'Sun, Apr 27',
+    time: '21:00 IST',
+    competition: 'La Liga',
+    venue: 'Balaídos',
+  },
+];
+
+export const recentResults: MatchResult[] = [
+  {
+    id: 'res-1',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Real Madrid',
+    homeScore: 2,
+    awayScore: 1,
+    date: 'Mar 30, 2025',
+    competition: 'La Liga',
+  },
+  {
+    id: 'res-2',
+    homeTeam: 'Borussia Dortmund',
+    awayTeam: 'FC Barcelona',
+    homeScore: 0,
+    awayScore: 3,
+    date: 'Mar 26, 2025',
+    competition: 'UCL Round of 16',
+  },
+  {
+    id: 'res-3',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Athletic Bilbao',
+    homeScore: 4,
+    awayScore: 0,
+    date: 'Mar 22, 2025',
+    competition: 'La Liga',
+  },
+  {
+    id: 'res-4',
+    homeTeam: 'Girona FC',
+    awayTeam: 'FC Barcelona',
+    homeScore: 1,
+    awayScore: 4,
+    date: 'Mar 15, 2025',
+    competition: 'La Liga',
+  },
+  {
+    id: 'res-5',
+    homeTeam: 'FC Barcelona',
+    awayTeam: 'Borussia Dortmund',
+    homeScore: 3,
+    awayScore: 1,
+    date: 'Mar 12, 2025',
+    competition: 'UCL Round of 16',
+  },
+];
+
+export const merchandiseItems: MerchandiseItem[] = [
+  {
+    id: 'merch-1',
+    name: 'FCB Kolkata Official Scarf',
+    price: '₹599',
+    category: 'Accessories',
+    status: 'In Stock',
+    imagePlaceholder: 'fcb-scarf',
+  },
+  {
+    id: 'merch-2',
+    name: 'Retro 1999 Anniversary Jersey (Replica)',
+    price: '₹1499',
+    category: 'Apparel',
+    status: 'Pre-order',
+    imagePlaceholder: 'retro-jersey',
+  },
+  {
+    id: 'merch-3',
+    name: 'Penya Member Enamel Pin',
+    price: '₹299',
+    category: 'Accessories',
+    status: 'In Stock',
+    imagePlaceholder: 'enamel-pin',
+  },
+  {
+    id: 'merch-4',
+    name: 'Matchday Hoodie - Special Edition',
+    price: '₹1999',
+    category: 'Apparel',
+    status: 'Coming Soon',
+    imagePlaceholder: 'hoodie',
+  },
+  {
+    id: 'merch-5',
+    name: 'Camp Nou Framed Poster',
+    price: '₹899',
+    category: 'Memorabilia',
+    status: 'In Stock',
+    imagePlaceholder: 'poster',
+  },
+  {
+    id: 'merch-6',
+    name: 'Official Fan Club Coffee Mug',
+    price: '₹399',
+    category: 'Accessories',
+    status: 'In Stock',
+    imagePlaceholder: 'coffee-mug',
   },
 ];

@@ -15,7 +15,11 @@ import { FadeIn } from "@/components/ui/fade-in";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/events", label: "Events" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/fixtures", label: "Fixtures" },
+  { href: "/squad", label: "Squad" },
   { href: "/membership", label: "Membership" },
+  { href: "/merchandise", label: "Merchandise" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
