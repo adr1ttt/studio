@@ -8,25 +8,25 @@ body {
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 10% 23%;
-    --card: 0 0% 100%;
-    --card-foreground: 210 10% 23%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 10% 23%;
-    --primary: 210 100% 30%; /* #004C99 */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 337 100% 33%; /* #A70042 */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 100% 30%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 100% 40%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 337 80% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 210 100% 40%;
     --radius: 0.5rem;
   }
   .dark {
@@ -57,6 +57,38 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: hsl(var(--background));
+    background-image: 
+      radial-gradient(at 0% 0%, hsl(var(--primary) / 0.8) 0%, hsl(var(--primary) / 0.5) 25%, hsl(var(--primary) / 0.2) 45%, transparent 70%),
+      radial-gradient(at 100% 0%, hsl(var(--accent) / 0.8) 0%, hsl(var(--accent) / 0.5) 25%, hsl(var(--accent) / 0.2) 45%, transparent 70%),
+      radial-gradient(at 100% 100%, hsl(var(--primary) / 0.8) 0%, hsl(var(--primary) / 0.5) 25%, hsl(var(--primary) / 0.2) 45%, transparent 70%),
+      radial-gradient(at 0% 100%, hsl(var(--accent) / 0.8) 0%, hsl(var(--accent) / 0.5) 25%, hsl(var(--accent) / 0.2) 45%, transparent 70%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  
+  .liquid-glass {
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  .dark .liquid-glass {
+    @apply bg-black/20 border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.3)];
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
   }
 }

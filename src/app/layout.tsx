@@ -19,12 +19,13 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">
-        <div className="flex min-h-screen flex-col bg-background">
+      <body className="font-body antialiased selection:bg-primary/30">
+        <div className="fixed inset-0 bg-noise z-0 pointer-events-none" />
+        <div className="relative flex min-h-screen flex-col z-10">
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 relative">{children}</main>
           <SiteFooter />
         </div>
         <Toaster />

@@ -16,8 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+import { MagneticHover } from "@/components/ui/magnetic-hover";
 
 export function MembershipForm() {
   const { toast } = useToast();
@@ -32,76 +31,74 @@ export function MembershipForm() {
   });
 
   function onSubmit(data: MembershipFormValues) {
-    console.log(data);
     toast({
       title: "Subscription successful!",
       description: "Welcome to the family! We've sent a confirmation to your email.",
     });
-    // Here you would redirect to a payment link e.g., window.location.href = '...';
     form.reset();
   }
 
   return (
-    <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline text-2xl">Join the Family</CardTitle>
-        <CardDescription>Fill in your details to become a premium member.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Full Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your Name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email Address</FormLabel>
-                  <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input placeholder="+91 ..." {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" className="w-full">
-              Subscribe for ₹499/year
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-      <CardFooter>
-         <p className="text-xs text-muted-foreground">
+    <div className="p-8 md:p-12 lg:p-16">
+      <div className="mb-12">
+        <h3 className="font-headline text-4xl font-bold tracking-tight text-white mb-4">Join the Penya</h3>
+        <p className="text-foreground/70 text-xl font-medium">Fill in your details to become a premium member.</p>
+      </div>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-lg text-foreground/90 font-medium">Full Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Your Name" {...field} className="h-16 bg-white/5 border-white/20 text-white placeholder:text-white/30 focus-visible:ring-primary focus-visible:border-primary backdrop-blur-sm text-lg rounded-xl transition-all" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-lg text-foreground/90 font-medium">Email Address</FormLabel>
+                <FormControl>
+                  <Input placeholder="your.email@example.com" {...field} className="h-16 bg-white/5 border-white/20 text-white placeholder:text-white/30 focus-visible:ring-primary focus-visible:border-primary backdrop-blur-sm text-lg rounded-xl transition-all" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-lg text-foreground/90 font-medium">Phone Number</FormLabel>
+                <FormControl>
+                  <Input placeholder="+91 ..." {...field} className="h-16 bg-white/5 border-white/20 text-white placeholder:text-white/30 focus-visible:ring-primary focus-visible:border-primary backdrop-blur-sm text-lg rounded-xl transition-all" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <MagneticHover strength={15} className="pt-6">
+             <Button type="submit" className="w-full h-16 rounded-full bg-white text-black hover:bg-gray-200 transition-colors font-bold shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] text-xl border-none hover:scale-[1.02]">
+               Subscribe for ₹499/year
+             </Button>
+          </MagneticHover>
+        </form>
+      </Form>
+      <div className="mt-10 text-center">
+         <p className="text-sm text-muted-foreground leading-relaxed font-medium">
             By clicking "Subscribe", you agree to our 
-            <Link href="#" className="underline hover:text-primary"> Terms of Service </Link> 
-            and will be redirected to our secure payment gateway.
+            <Link href="#" className="underline hover:text-white ml-2 transition-colors">Terms of Service</Link> 
+            <br className="mt-1"/>and will be redirected to our secure payment gateway.
           </p>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 }
