@@ -12,11 +12,31 @@ import { Button } from '@/components/ui/button';
 import { ShoppingBag, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { getSession } from '@/lib/actions/auth';
+import { useCart } from '@/components/cart-provider';
+import { useToast } from '@/hooks/use-toast';
 
 const categories = ['All', 'Apparel', 'Accessories', 'Memorabilia'] as const;
 
 export default function MerchandisePage() {
   const [filter, setFilter] = useState<string>('All');
+  const router = useRouter();
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = async (item: typeof merchandiseItems[0]) => {
+    const isAuth = await getSession();
+    if (!isAuth) {
+      router.push('/login?callbackUrl=/merchandise');
+    } else {
+      addToCart(item);
+      toast({
+        title: "Added to cart",
+        description: `${item.name} has been added to your cart.`,
+      });
+    }
+  };
 
   const filteredItems = filter === 'All'
     ? merchandiseItems
@@ -119,6 +139,7 @@ export default function MerchandisePage() {
                           : "bg-primary text-white hover:bg-primary/80 shadow-[0_0_15px_rgba(0,76,153,0.4)]"
                       )}
                       disabled={item.status === 'Coming Soon'}
+                      onClick={() => handleAddToCart(item)}
                       title={item.status === 'Coming Soon' ? "Not available yet" : "Add to cart"}
                       >
                         <ShoppingBag className="h-5 w-5" />

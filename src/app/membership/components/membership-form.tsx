@@ -5,6 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { membershipSchema, type MembershipFormValues } from "@/lib/schemas";
 import { useToast } from "@/hooks/use-toast";
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
+import { getSession } from "@/lib/actions/auth";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -18,7 +20,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { MagneticHover } from "@/components/ui/magnetic-hover";
 
-export function MembershipForm() {
+interface MembershipFormProps {
+  selectedTier: {
+    name: string;
+    price: string;
+    period: string;
+  };
+}
+
+export function MembershipForm({ selectedTier }: MembershipFormProps) {
   const { toast } = useToast();
   
   const form = useForm<MembershipFormValues>({
@@ -30,7 +40,15 @@ export function MembershipForm() {
     },
   });
 
-  function onSubmit(data: MembershipFormValues) {
+  const router = useRouter();
+
+  async function onSubmit(data: MembershipFormValues) {
+    const isAuth = await getSession();
+    if (!isAuth) {
+      router.push("/login?callbackUrl=/membership");
+      return;
+    }
+
     toast({
       title: "Subscription successful!",
       description: "Welcome to the family! We've sent a confirmation to your email.",
@@ -87,7 +105,7 @@ export function MembershipForm() {
           />
           <MagneticHover strength={15} className="pt-6">
              <Button type="submit" className="w-full h-16 rounded-full bg-white text-black hover:bg-gray-200 transition-colors font-bold shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] text-xl border-none hover:scale-[1.02]">
-               Subscribe for ₹499/year
+               Subscribe for {selectedTier.price}{selectedTier.period} ({selectedTier.name})
              </Button>
           </MagneticHover>
         </form>

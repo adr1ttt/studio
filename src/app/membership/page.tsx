@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from 'react';
 import { CheckCircle, Star } from 'lucide-react';
 import { MembershipForm } from './components/membership-form';
 import { FadeIn } from '@/components/ui/fade-in';
@@ -5,6 +8,7 @@ import { LiquidGlassCard } from '@/components/ui/liquid-glass-card';
 import { MagneticHover } from '@/components/ui/magnetic-hover';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const tiers = [
@@ -56,6 +60,8 @@ const tiers = [
 ];
 
 export default function MembershipPage() {
+  const [selectedTier, setSelectedTier] = useState(tiers[1]); // Default to General
+
   return (
     <div className="container mx-auto max-w-7xl py-20 px-4 sm:px-6 lg:px-8">
       <header className="text-center mb-24">
@@ -73,55 +79,75 @@ export default function MembershipPage() {
       
       {/* Pricing Tiers */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 mb-32 items-stretch">
-        {tiers.map((tier, index) => (
-          <FadeIn key={tier.name} direction="up" delay={0.15 * index} className="h-full">
-            <LiquidGlassCard
-              tiltStrength={5}
-              className={`h-full flex flex-col p-10 lg:p-12 border-white/10 bg-background/20 relative ${
-                tier.popular ? 'ring-2 ring-accent shadow-[0_0_40px_rgba(165,0,68,0.3)]' : ''
-              }`}
-            >
-              {tier.popular && (
-                <Badge className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accent text-white border-none px-6 py-1.5 text-sm font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(165,0,68,0.5)]">
-                  <Star className="h-3.5 w-3.5 mr-2" /> Most Popular
-                </Badge>
-              )}
-              
-              <div className="mb-10">
-                <h3 className="font-headline text-3xl font-bold text-white tracking-tight mb-3">{tier.name}</h3>
-                <p className="text-foreground/60 font-medium text-lg">{tier.description}</p>
-              </div>
-              
-              <div className="mb-10">
-                <span className="font-headline text-6xl font-bold text-white tracking-tighter">{tier.price}</span>
-                <span className="text-foreground/50 text-xl font-medium ml-2">{tier.period}</span>
-              </div>
-              
-              <ul className="space-y-5 mb-12 flex-grow">
-                {tier.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-4">
-                    <CheckCircle className={`h-6 w-6 shrink-0 mt-0.5 ${tier.popular ? 'text-accent drop-shadow-[0_0_8px_rgba(165,0,68,0.8)]' : 'text-primary drop-shadow-[0_0_8px_rgba(0,76,153,0.8)]'}`} />
-                    <span className="text-foreground/80 font-medium text-lg">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <MagneticHover strength={15}>
-                <Button
-                  asChild
-                  size="lg"
-                  className={`w-full h-16 rounded-full font-bold text-xl border-none transition-all ${
-                    tier.popular
-                      ? 'bg-accent text-white hover:bg-accent/90 shadow-[0_0_30px_rgba(165,0,68,0.4)] hover:shadow-[0_0_40px_rgba(165,0,68,0.6)]'
-                      : 'bg-white text-black hover:bg-gray-200 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]'
-                  }`}
-                >
-                  <Link href="#membership-form">Get Started</Link>
-                </Button>
-              </MagneticHover>
-            </LiquidGlassCard>
-          </FadeIn>
-        ))}
+        {tiers.map((tier, index) => {
+          const isSelected = selectedTier.name === tier.name;
+          return (
+            <FadeIn key={tier.name} direction="up" delay={0.15 * index} className="h-full">
+              <LiquidGlassCard
+                tiltStrength={5}
+                onClick={() => {
+                  setSelectedTier(tier);
+                }}
+                className={cn(
+                  "h-full flex flex-col p-10 lg:p-12 border-white/10 bg-background/20 relative cursor-pointer transition-all duration-500",
+                  isSelected 
+                    ? tier.popular ? "ring-4 ring-accent shadow-[0_0_60px_rgba(165,0,68,0.5)] bg-white/5" : "ring-4 ring-primary shadow-[0_0_60px_rgba(0,76,153,0.5)] bg-white/5"
+                    : tier.popular ? "ring-2 ring-accent/30 shadow-[0_0_40px_rgba(165,0,68,0.2)]" : "hover:border-white/30"
+                )}
+              >
+                {tier.popular && (
+                  <Badge className={cn(
+                    "absolute -top-3.5 left-1/2 -translate-x-1/2 text-white border-none px-6 h-9 text-sm font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(165,0,68,0.5)] flex items-center justify-center whitespace-nowrap z-20 transition-all duration-300",
+                    isSelected ? "bg-accent scale-110" : "bg-accent/80"
+                  )}>
+                    <div className="flex items-center justify-center gap-2 -translate-y-[0.5px]">
+                      <Star className="h-4 w-4" /> 
+                      <span className="leading-none">Most Popular</span>
+                    </div>
+                  </Badge>
+                )}
+                
+                <div className="mb-10">
+                  <h3 className="font-headline text-3xl font-bold text-white tracking-tight mb-3">{tier.name}</h3>
+                  <p className="text-foreground/60 font-medium text-lg">{tier.description}</p>
+                </div>
+                
+                <div className="mb-10">
+                  <span className="font-headline text-6xl font-bold text-white tracking-tighter">{tier.price}</span>
+                  <span className="text-foreground/50 text-xl font-medium ml-2">{tier.period}</span>
+                </div>
+                
+                <ul className="space-y-5 mb-12 flex-grow">
+                  {tier.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-4">
+                      <CheckCircle className={`h-6 w-6 shrink-0 mt-0.5 ${tier.popular ? 'text-accent drop-shadow-[0_0_8px_rgba(165,0,68,0.8)]' : 'text-primary drop-shadow-[0_0_8px_rgba(0,76,153,0.8)]'}`} />
+                      <span className="text-foreground/80 font-medium text-lg">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <MagneticHover strength={15}>
+                  <Button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedTier(tier);
+                      document.getElementById('membership-form')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    size="lg"
+                    className={cn(
+                      "w-full h-16 rounded-full font-bold text-xl border-none transition-all",
+                      tier.popular
+                        ? "bg-accent text-white hover:bg-accent/90 shadow-[0_0_30px_rgba(165,0,68,0.4)]"
+                        : "bg-white text-black hover:bg-gray-200 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                    )}
+                  >
+                    {isSelected ? "Selected" : "Get Started"}
+                  </Button>
+                </MagneticHover>
+              </LiquidGlassCard>
+            </FadeIn>
+          );
+        })}
       </div>
 
       {/* Registration Form */}
@@ -132,7 +158,7 @@ export default function MembershipPage() {
             <p className="text-foreground/80 mt-6 text-xl font-medium">Fill in your details to get started.</p>
           </div>
           <LiquidGlassCard tiltStrength={2} className="bg-background/30 border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] rounded-3xl">
-             <MembershipForm />
+             <MembershipForm selectedTier={selectedTier} />
           </LiquidGlassCard>
         </FadeIn>
       </div>

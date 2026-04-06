@@ -5,6 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { eventBookingSchema, type EventBookingFormValues } from "@/lib/schemas";
 import { useToast } from "@/hooks/use-toast";
 import type { Event } from "@/lib/types";
+import { useRouter } from "next/navigation";
+import { getSession } from "@/lib/actions/auth";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,6 +37,8 @@ interface EventBookingFormProps {
 
 export function EventBookingForm({ event, children }: EventBookingFormProps) {
   const { toast } = useToast();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
   
   const form = useForm<EventBookingFormValues>({
     resolver: zodResolver(eventBookingSchema),
@@ -44,19 +49,29 @@ export function EventBookingForm({ event, children }: EventBookingFormProps) {
     },
   });
 
+  async function handleOpenChange(open: boolean) {
+    if (open) {
+      const isAuth = await getSession();
+      if (!isAuth) {
+        router.push('/login?callbackUrl=/events');
+        return;
+      }
+    }
+    setIsOpen(open);
+  }
+
   function onSubmit(data: EventBookingFormValues) {
     console.log(data);
     toast({
       title: "Registration Successful!",
       description: `You've booked ${data.tickets} ticket(s) for ${event.name}. Check your email for confirmation.`,
     });
-    // Here you would typically call an API to process the booking
-    // For now, we just show a toast and close the dialog
+    setIsOpen(false);
     form.reset();
   }
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -107,9 +122,7 @@ export function EventBookingForm({ event, children }: EventBookingFormProps) {
               )}
             />
             <DialogFooter>
-               <DialogClose asChild>
                 <Button type="submit" className="w-full">Book Now</Button>
-               </DialogClose>
             </DialogFooter>
           </form>
         </Form>

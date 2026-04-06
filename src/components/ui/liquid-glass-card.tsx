@@ -8,10 +8,12 @@ export function LiquidGlassCard({
   children,
   className,
   tiltStrength = 15,
+  onClick,
 }: {
   children: React.ReactNode;
   className?: string;
   tiltStrength?: number;
+  onClick?: () => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -59,6 +61,7 @@ export function LiquidGlassCard({
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       initial={{ opacity: 0, scale: 0.95, y: 20 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, margin: "-10%" }}
