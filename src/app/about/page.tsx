@@ -23,33 +23,38 @@ export default function AboutPage() {
         </FadeIn>
       </header>
 
-      <FadeIn direction="up" delay={0.4} className="mb-24">
-        <LiquidGlassCard tiltStrength={3} className="overflow-hidden bg-background/20 border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] rounded-3xl">
-          <div className="lg:flex">
-            <div className="lg:w-1/2 relative min-h-[400px]">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt={aboutImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
+      {/* Timeline Section */}
+      <section className="mb-32 relative">
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent hidden md:block" />
+        
+        <div className="space-y-24 relative">
+          {[
+            { year: "2012", title: "The First Gathering", desc: "A handful of friends meet at a small South Kolkata café to watch El Clásico. The idea for FCB Kolkata is born." },
+            { year: "2015", title: "Community Surge", desc: "Our Facebook group hits 10,000 members. We host our first stadium-scale screening with over 500 fans." },
+            { year: "2019", title: "Official Recognition", desc: "FC Barcelona officially recognises us as a Penya. We receive our official license and global support." },
+            { year: "2022", title: "Charity & Impact", desc: "Launch of 'Culers for Change'. We raise our first ₹1L for local sports schools, bridging football and social good." },
+            { year: "2026", title: "Digital Overhaul", desc: "Launch of the premium fan hub, connecting culers across the city with real-time news, shop, and community tools." }
+          ].map((item, i) => (
+            <div key={item.year} className="relative">
+              {/* Dot */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-4 h-4 rounded-full bg-primary shadow-[0_0_15px_rgba(0,76,153,1)] z-10 hidden md:block" />
+              
+              <div className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                <div className="w-full md:w-1/2">
+                  <FadeIn direction={i % 2 === 0 ? "right" : "left"}>
+                    <LiquidGlassCard className={`p-8 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'} border-white/5`}>
+                      <span className="text-primary font-headline text-3xl font-bold mb-2 block">{item.year}</span>
+                      <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                      <p className="text-foreground/60 leading-relaxed">{item.desc}</p>
+                    </LiquidGlassCard>
+                  </FadeIn>
+                </div>
+                <div className="hidden md:block md:w-1/2" />
+              </div>
             </div>
-            <div className="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center bg-background/30 backdrop-blur-md">
-              <h2 className="text-3xl lg:text-4xl font-bold font-headline text-white mb-6 tracking-tight">The Beginning</h2>
-              <p className="text-foreground/80 mb-10 text-lg leading-relaxed font-medium">
-                Our journey started in 2012 with a handful of passionate FC Barcelona supporters who gathered in a small café to watch El Clásico. The energy was electric, and we knew we had something special. We decided to create a community where fans from all over Kolkata could share their love for the club.
-              </p>
-              <h2 className="text-3xl lg:text-4xl font-bold font-headline text-white mb-6 tracking-tight">Growth and Community</h2>
-              <p className="text-foreground/80 text-lg leading-relaxed font-medium">
-                Over the years, our fanpage has grown into one of the most active fan communities in India. We've organized countless screenings, tournaments, and charity events, bringing together thousands of Cules. Our goal is to create a home away from home for every Barça fan in Kolkata.
-              </p>
-            </div>
-          </div>
-        </LiquidGlassCard>
-      </FadeIn>
+          ))}
+        </div>
+      </section>
 
       <section>
         <div className="text-center mb-16">

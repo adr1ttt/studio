@@ -20,11 +20,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      {/* News Ticker */}
-      <NewsTicker items={newsItems.map(n => n.headline)} speed={40} />
-
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] w-full flex items-center justify-center text-center overflow-hidden pt-20">
+      <section className="relative min-h-[90vh] w-full flex items-center justify-center text-center overflow-hidden pt-44">
         {heroImage && (
           <div className="absolute inset-0 z-0">
              <Image

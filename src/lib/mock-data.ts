@@ -1,4 +1,4 @@
-import type { Event, Organizer, GalleryImage, NewsItem, SquadPlayer, Fixture, MatchResult, MerchandiseItem } from './types';
+import type { Event, Organizer, GalleryImage, NewsItem, SquadPlayer, Fixture, MatchResult, MerchandiseItem, CommunityPost } from './types';
 
 export const events: Event[] = [
   {
@@ -69,12 +69,69 @@ export const galleryImages: GalleryImage[] = [
 ];
 
 export const newsItems: NewsItem[] = [
-  { headline: "FCB Kolkata ranked among India's Top 5 Official Penyes" },
-  { headline: "El Clásico Live Screening — Registrations Now Open!" },
-  { headline: "New season, new kits — Blaugrana merchandise arriving soon" },
-  { headline: "Annual Charity Drive raises ₹2L+ for local schools" },
-  { headline: "FCB Kolkata celebrates 10 years of Més que un club" },
-  { headline: "Blaugrana Cup 2025 registration begins next month" },
+  {
+    id: "news-1",
+    headline: "FCB Kolkata ranked among India's Top 5 Official Penyes",
+    date: "April 12, 2026",
+    category: "Club",
+    author: "Aarav Sharma",
+    imageId: "news-ranking",
+    content: "We are thrilled to announce that FC Barcelona has officially recognized FCB Kolkata as one of the top 5 official fan clubs in India for the 2025-26 season. This recognition comes after a year of record-breaking screening attendances and community engagement projects.\n\n\"This is a testament to the passion of our members,\" said Aarav Sharma, President of FCB Kolkata. \"From our first meetup in 2012 to this official recognition, it's been an incredible journey for every Cule in the city.\""
+  },
+  {
+    id: "news-2",
+    headline: "El Clásico Live Screening — Registrations Now Open!",
+    date: "April 15, 2026",
+    category: "Events",
+    author: "Priya Das",
+    imageId: "news-clasico",
+    content: "The biggest match in club football is back! FCB Kolkata is hosting its signature live screening for the upcoming El Clásico. Expect high-octane atmosphere, prizes, and exclusive member discounts at the venue.\n\nRegistration is mandatory for all attendees. Premium and General members get priority access to seats. Ensure you have your digital membership card ready at the entrance."
+  },
+  {
+    id: "news-3",
+    headline: "New season, new kits — Blaugrana merchandise arriving soon",
+    date: "April 18, 2026",
+    category: "Merchandise",
+    author: "Rohan Banerjee",
+    imageId: "news-merch",
+    content: "The official shop is getting a refresh! We have partnered with Nike and official club distributors to bring the 2026-27 season kits directly to Kolkata. Pre-orders will open next week for verified Penya members.\n\nIn addition to the match kits, we are launching an exclusive series of 'Kolkata Culers' lifestyle apparel, including hoodies and commemorative scarves designed by local artists."
+  },
+  {
+    id: "news-4",
+    headline: "Annual Charity Drive raises ₹2L+ for local schools",
+    date: "April 20, 2026",
+    category: "Community",
+    author: "Aarav Sharma",
+    imageId: "news-charity",
+    content: "Football is about more than just the 90 minutes. Our annual 'Culers for Change' drive has successfully raised over ₹2,00,000 for local primary schools in Kolkata. The funds will go towards improving sports infrastructure and providing kits for young aspiring athletes.\n\nA huge thank you to all our members who donated and volunteered. This is what 'Més que un club' means to us."
+  }
+];
+
+export const communityPosts: CommunityPost[] = [
+  {
+    id: "post-1",
+    user: "Sayan_Culer",
+    content: "Still not over that Yamal goal from last night! The curve was insane. 🔵🔴",
+    timestamp: "2 hours ago",
+    likes: 24,
+    isMember: true
+  },
+  {
+    id: "post-2",
+    user: "Anjali_Barca",
+    content: "Does anyone know if the screening for the PSG game is happening at Maidan or Downtown?",
+    timestamp: "5 hours ago",
+    likes: 8,
+    isMember: true
+  },
+  {
+    id: "post-3",
+    user: "Deepak1899",
+    content: "Just got my official penya scarf! Material is top-notch. Highly recommend checking out the shop.",
+    timestamp: "1 day ago",
+    likes: 42,
+    isMember: true
+  }
 ];
 
 export const squadPlayers: SquadPlayer[] = [

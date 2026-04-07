@@ -25,7 +25,22 @@ export type GalleryImage = {
 };
 
 export type NewsItem = {
+  id: string;
   headline: string;
+  date: string;
+  category: "Club" | "Events" | "Merchandise" | "Community";
+  author: string;
+  content: string;
+  imageId: string;
+};
+
+export type CommunityPost = {
+  id: string;
+  user: string;
+  content: string;
+  timestamp: string;
+  likes: number;
+  isMember: boolean;
 };
 
 export type SquadPlayer = {

@@ -1,9 +1,9 @@
-"use client";
-
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { NewsItem } from "@/lib/types";
 
 interface NewsTickerProps {
-  items: string[];
+  items: NewsItem[];
   className?: string;
   speed?: number;
 }
@@ -15,7 +15,7 @@ export function NewsTicker({ items, className, speed = 30 }: NewsTickerProps) {
   return (
     <div
       className={cn(
-        "w-full overflow-hidden bg-primary/10 backdrop-blur-xl border-b border-white/5",
+        "w-full overflow-hidden relative z-[60] py-2",
         className
       )}
     >
@@ -26,13 +26,14 @@ export function NewsTicker({ items, className, speed = 30 }: NewsTickerProps) {
         }}
       >
         {duplicated.map((item, i) => (
-          <span
+          <Link
             key={i}
-            className="inline-flex items-center gap-4 px-8 text-sm font-medium text-foreground/70 tracking-wide"
+            href={`/news/${item.id}`}
+            className="inline-flex items-center gap-4 px-8 text-sm font-medium text-foreground/70 hover:text-white transition-colors tracking-wide group"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_rgba(165,0,68,0.8)]" />
-            {item}
-          </span>
+            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_rgba(165,0,68,0.8)] group-hover:scale-125 transition-transform" />
+            {item.headline}
+          </Link>
         ))}
       </div>
     </div>

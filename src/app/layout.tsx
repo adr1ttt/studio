@@ -5,6 +5,7 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { Toaster } from "@/components/ui/toaster";
 import { CartProvider } from "@/components/cart-provider";
 import { PageTransitions } from "@/components/ui/page-transitions";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
 
 export const metadata: Metadata = {
   title: 'FCB Kolkata Hub',
@@ -23,15 +24,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased selection:bg-primary/30">
+      <body className="font-body antialiased selection:bg-primary/30 min-h-screen relative">
         <CartProvider>
-          <div className="fixed inset-0 bg-noise z-0 pointer-events-none" />
-          <div className="relative flex min-h-screen flex-col z-10">
-            <SiteHeader />
-            <PageTransitions>{children}</PageTransitions>
-            <SiteFooter />
-          </div>
-          <Toaster />
+          <SmoothScroll>
+            <div className="relative flex min-h-screen flex-col z-10">
+              <SiteHeader />
+              <PageTransitions>{children}</PageTransitions>
+              <SiteFooter />
+            </div>
+            <Toaster />
+          </SmoothScroll>
         </CartProvider>
       </body>
     </html>
